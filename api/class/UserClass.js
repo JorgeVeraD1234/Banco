@@ -47,7 +47,7 @@ class ManagerUsers {
     }
     async Login(email, password) {
         try {
-            const user = await userModel.findOne({ email: email })
+            const user = await UserModel.findOne({ email: email })
             if (!user) {
                 throw new Error("Usuario no registrado")
             }
